@@ -1,0 +1,85 @@
+﻿<Page x:Class="WpfApp2879789797898798798798797897.Pages.PageAddProduct"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp2879789797898798798798797897.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="800"
+      Title="PageAddProduct">
+    <Grid>
+        <ScrollViewer Height="auto">
+            <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="Артикул: "
+                           Width="160" FontSize="17"/>
+                    <TextBox x:Name="articleTX" Width="180"
+                         FontSize="17"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="Наименование: "
+                           Width="160" FontSize="17"/>
+                    <TextBox x:Name="titleTX" Width="180"
+                         FontSize="17"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="Единица измерения:  "
+                           Width="160" FontSize="17"/>
+                    <ComboBox x:Name="typeEdIzmCB" 
+                          FontSize="17"
+                          Style="{StaticResource mainCombo }">
+                        <ComboBoxItem Content="уп." HorizontalAlignment="Left" />
+                        <ComboBoxItem Content="шт." HorizontalAlignment="Left"/>
+                    </ComboBox>
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="Стоимость: "
+                           Width="160" FontSize="17" TextWrapping="Wrap"/>
+                    <TextBox x:Name="StoimTX" Width="180"
+                         FontSize="17"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="Max скидка: "
+                           Width="160" FontSize="17" TextWrapping="Wrap"/>
+                    <TextBox x:Name="MaxSkdTX" Width="180"
+                         FontSize="17"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="Производитель: "
+                           Width="160" FontSize="17" TextWrapping="Wrap"/>
+                    <ComboBox x:Name="comboBox2" Style="{StaticResource mainCombo }" DisplayMemberPath="Manufacturer1"  ></ComboBox>
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="Поставщик: "
+                           Width="160" FontSize="17" TextWrapping="Wrap"/>
+                    <ComboBox x:Name="comboBox3" Style="{StaticResource mainCombo }" DisplayMemberPath="provider1"  ></ComboBox>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="Описание: "
+                           Width="160" FontSize="17"/>
+                    <TextBox x:Name="descTX" Width="180" Height="30"
+                         FontSize="17"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="Изображение: "
+                           Width="160" FontSize="17" TextWrapping="Wrap"/>
+                    <TextBox x:Name="Foto" Width="180"
+                         FontSize="17"/>
+                </StackPanel>
+                <Button x:Name="saveAddBT"
+                    Style="{StaticResource mainBtn}" Content="Сохранить"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="BtnEdit" Content="Редактировать" Style="{StaticResource mainBtn}" Margin="10,10,10,10" Click="BtnEdit_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
